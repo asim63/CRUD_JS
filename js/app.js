@@ -1,5 +1,6 @@
 import { createForm } from "./form.js";
-//import { createItems } from "./items.js";
+import { createItems } from "./items.js";
+import { groceryItems } from "./data.js";
 
 function getLocalStorage() {
   const list = localStorage.getItem("grocery-list");
@@ -14,7 +15,7 @@ function setLocalStorage(itemsArray) {
 }
 
 //Making render function
-let items = getLocalStorage();
+let items = groceryItems;
 let editId = null;
 
 function render() {
@@ -26,8 +27,8 @@ function render() {
     editId ? items.find((item) => item.id === editId) : null,
   );
 
-  //const itemsElement = createItems(items);
   app.appendChild(formElement);
-  // app.appendChild(itemsElement);
+  const itemsElement = createItems(items);
+  app.appendChild(itemsElement);
 }
 render();
