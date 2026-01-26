@@ -33,3 +33,19 @@ function render() {
   app.appendChild(itemsElement);
 }
 render();
+
+export function updateItemName(newName) {
+  items = items.map((item) => {
+    if (item.id === editId) {
+      return { ...item, name: newName };
+    }
+    return item;
+  });
+
+  editId = null;
+  setLocalStorage(items);
+  render();
+  setTimeout(() => alert("Item Updated Successfully!"), 0);
+}
+
+//

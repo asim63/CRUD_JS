@@ -15,5 +15,19 @@ export function createForm(editId, itemToEdit) {
      </div>
     `;
 
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const input = form.querySelector(".form-input");
+    const value = input.value.trim();
+
+    if (!value) {
+      alert("please provide value", "error");
+      return;
+    }
+
+    addItem(value);
+
+    input.value = "";
+  });
   return form;
 }
