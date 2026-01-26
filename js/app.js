@@ -28,6 +28,7 @@ function render() {
   );
 
   app.appendChild(formElement);
+
   const itemsElement = createItems(items);
   app.appendChild(itemsElement);
 }

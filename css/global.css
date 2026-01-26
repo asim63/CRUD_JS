@@ -12,8 +12,8 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background: url(../images/final_image.png);
-  background-position: initial;
+  background: url(../images/background_4.jpg);
+  background-position: center;
   background-size: cover;
   background-repeat: repeat;
 }
@@ -23,6 +23,7 @@ body {
   border-radius: 30px;
   margin-top: 10rem;
   padding: 2rem;
+  border: 3px solid rgba(123, 123, 123, 0.4);
   max-width: 30rem;
   box-shadow: 2px 7px 8px 3px rgb(50, 143, 159);
 }
