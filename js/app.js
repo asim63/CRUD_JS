@@ -43,8 +43,9 @@ export function addItem(itemName) {
     id: generateID(),
   };
   items = [...items, newItem];
+  setLocalStorage(items);
   render();
-  setTimeout(() => alert("Item Added Successfully!"), 0);
+  setTimeout(() => alert("Item Added Successfully!"), 10);
 }
 export function updateItemName(newName) {
   items = items.map((item) => {
@@ -73,16 +74,16 @@ export function setEditId(itemId) {
 }
 
 export function removeItem(itemId) {
-  items = item.filter((item) => item.id !== itemId);
+  items = items.filter((item) => item.id !== itemId);
   setLocalStorage(items);
   render();
   setTimeout(() => alert("Item Deleted Successfully"), 10);
 }
 
 export function editCompleted(itemId) {
-  items = item.map((item) => {
+  items = items.map((item) => {
     if (item.id === itemId) {
-      return { ...items, completed: !item.completed };
+      return { ...item, completed: !item.completed };
     }
     return item;
   });

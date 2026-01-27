@@ -5,7 +5,7 @@ export function createSingleItem(item) {
   div.className = "single_item";
 
   div.innerHTML = `
-  <input type="checkbox"  ${item.completed ? "checked" : ""}/>
+  <input type="checkbox" ${item.completed ? "checked" : ""} />
   <p style="text-decoration: ${item.completed ? "line-through" : "none"}">
   ${item.name}</p>
 
@@ -25,7 +25,8 @@ export function createSingleItem(item) {
   const removeBtn = div.querySelector(".remove-btn");
   removeBtn.addEventListener("click", () => removeItem(item.id));
 
-  const checkbox = div.querySelector('input[type"checkbox"]');
+  const checkbox = div.querySelector('input[type="checkbox"]');
   checkbox.addEventListener("change", () => editCompleted(item.id));
+
   return div;
 }
