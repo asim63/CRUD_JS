@@ -6,7 +6,7 @@ export function createSingleItem(item) {
 
   div.innerHTML = `
   <input type="checkbox" ${item.completed ? "checked" : ""} />
-  <p style="text-decoration: ${item.completed ? "line-through" : "none"}">
+  <p style="text-decoration: ${item.completed ? "line-through" : "none"};color:${item.completed ? "black" : "white"}">
   ${item.name}</p>
 
   <button class = "btn icon-btn edit-btn" type='button'>

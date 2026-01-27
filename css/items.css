@@ -2,9 +2,11 @@
   margin-top: 1.5rem;
   display: grid;
   row-gap: 0.7rem;
-  border: transparent;
-  padding: 10px 20px;
-  background: transparent;
+}
+
+.items.has-items {
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
   border-radius: 12px;
+  padding: 10px 20px;
 }
