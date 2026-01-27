@@ -15,7 +15,7 @@ function setLocalStorage(itemsArray) {
 }
 
 //Making render function
-let items = groceryItems;
+let items = getLocalStorage();
 let editId = null;
 
 function render() {
@@ -70,4 +70,22 @@ export function setEditId(itemId) {
       input.focus();
     }
   }, 0);
+}
+
+export function removeItem(itemId) {
+  items = item.filter((item) => item.id !== itemId);
+  setLocalStorage(items);
+  render();
+  setTimeout(() => alert("Item Deleted Successfully"), 10);
+}
+
+export function editCompleted(itemId) {
+  items = item.map((item) => {
+    if (item.id === itemId) {
+      return { ...items, completed: !item.completed };
+    }
+    return item;
+  });
+  setLocalStorage(items);
+  render();
 }
