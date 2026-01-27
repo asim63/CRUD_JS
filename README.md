@@ -1,4 +1,4 @@
-# Grocery Bud – CRUD Application (Vanilla JavaScript)
+# Grocery Bud – CRUD Application
 
 Grocery Bud is a simple CRUD (Create, Read, Update, Delete) web application built using JavaScript, HTML, and CSS. The main goal of this project is to understand how frontend applications work internally without relying on any JavaScript frameworks. The application allows users to add grocery items, edit existing items, mark items as completed, delete items, and persist data using the browser’s `localStorage`.
 
