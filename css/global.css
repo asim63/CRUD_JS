@@ -28,3 +28,16 @@ body {
   max-width: 30rem;
   box-shadow: 2px 7px 8px 3px rgb(50, 143, 159);
 }
+
+@media screen and (max-width: 500px) {
+  .section-center {
+    padding: 1.2rem;
+    width: 90%;
+  }
+}
+/*for desktop only*/
+@media (hover: hover) {
+  .section-center:hover {
+    box-shadow: 2px 7px 8px 3px rgb(74, 209, 233);
+  }
+}

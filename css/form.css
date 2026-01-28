@@ -33,3 +33,19 @@
 .form-button:hover {
   background: rgb(70, 70, 70);
 }
+
+@media (max-width: 500px) {
+  .form-control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .form-input {
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
