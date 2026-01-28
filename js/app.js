@@ -45,7 +45,7 @@ export function addItem(itemName) {
   items = [...items, newItem];
   setLocalStorage(items);
   render();
-  setTimeout(() => alert("Item Added Successfully!"), 10);
+  //setTimeout(() => alert("Item Added Successfully!"), 10);
 }
 export function updateItemName(newName) {
   items = items.map((item) => {
@@ -58,7 +58,7 @@ export function updateItemName(newName) {
   editId = null;
   setLocalStorage(items);
   render();
-  setTimeout(() => alert("Item Updated Successfully!"), 0);
+  //setTimeout(() => alert("Item Updated Successfully!"), 0);
 }
 
 export function setEditId(itemId) {
@@ -77,7 +77,7 @@ export function removeItem(itemId) {
   items = items.filter((item) => item.id !== itemId);
   setLocalStorage(items);
   render();
-  setTimeout(() => alert("Item Deleted Successfully"), 10);
+  // setTimeout(() => alert("Item Deleted Successfully"), 10);
 }
 
 export function editCompleted(itemId) {
